@@ -11,7 +11,6 @@ h4 {
     float: left;
     height: 100px;
     width: 100px;
-    clear: none;
 }
 
 .row > div:hover {
@@ -20,8 +19,11 @@ h4 {
 }
 
 .row {
+    clear: both;
     margin: auto;
     text-align: center;
+    line-height: 100px;
+    font-size: x-large;
     width: 302px;
 }
 
