@@ -17,7 +17,9 @@ function cellClicked() {
             }
             clickNum += 1;
             if (clickNum > 4) {
-                checkWin();
+                setTimeout(function() {
+                    checkWin();
+                }, 100);
             }
         }
     } else {
@@ -59,13 +61,13 @@ function checkWin() {
     } else if (cells[2].textContent === 'O' && cells[5].textContent === 'O' && cells[8].textContent === 'O') {
         alert("O Wins!"); win += 1
     } else if (clickNum == 9) {
-        alert("It's a Draw!"); win += 1
+        alert("It's a Draw!"); win += 2
     }
 }
 
 function reset() {
     for (let i = 0; i < cells.length; i++) {
         cells[i].textContent = '';
-        clickNum = 0; win = 0;
     }
+    clickNum = 0; win = 0;
 }
